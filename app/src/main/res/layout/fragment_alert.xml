@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="16dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+        <ImageView
+            android:layout_width="72dp"
+            android:id="@+id/dialog_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_trophy"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_height="72dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_24"
+            android:id="@+id/text_success"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintTop_toBottomOf="@id/dialog_icon"
+            android:text="Success"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_margin="@dimen/margin_24"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="14dp"
+            android:id="@+id/close_btn"
+            android:text="Okay"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

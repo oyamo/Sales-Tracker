@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    app:contentPaddingBottom="@dimen/margin_24"
+    app:cardCornerRadius="16dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+        <ImageView
+            android:layout_width="72dp"
+            android:id="@+id/dialog_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_outline_cancel_24"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_height="72dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/touche"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_error"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintTop_toBottomOf="@id/dialog_icon"
+            android:text="Failed"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/touche"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:textAlignment="center"
+            android:id="@+id/text_description"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_error"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_margin="@dimen/margin_24"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="14dp"
+            android:id="@+id/close_btn"
+            android:text="Okay"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_description"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

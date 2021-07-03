@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Onboarding">
+
+    <ImageView
+        android:id="@+id/featured_pic"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/undraw_data_reports"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/onboarding_title"
+        app:layout_constraintTop_toBottomOf="@id/featured_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/touche"
+        android:textSize="@dimen/text_title_size"
+        android:layout_margin="@dimen/margin_24"
+        android:padding="@dimen/margin_24"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textAlignment="center"
+        android:text="@string/onboarding_title"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/onboarding_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/touche"
+        android:paddingLeft="@dimen/margin_48"
+        android:paddingRight="@dimen/margin_48"
+        android:text="@string/onboarding_description"
+        android:textAlignment="center"
+        android:textSize="@dimen/regular_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onboarding_title" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_48"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="150dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-30dp"
+            android:fontFamily="@font/touche"
+            android:text="@string/btn_register_onboarding"
+            android:textAllCaps="false"
+            android:textColor="#010101"
+            android:textFontWeight="1000"
+            app:backgroundTint="#f2f2f2"
+            android:onClick="registerActivity"
+            app:cornerRadius="13dp"
+            tools:targetApi="p"
+            tools:ignore="UsingOnClickInXml" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="150dp"
+            android:layout_height="68dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/register_btn"
+            android:fontFamily="@font/touche"
+            android:onClick="loginActivity"
+            android:text="@string/btn_login_onboarding"
+            android:textAllCaps="false"
+            app:backgroundTint="#00BFA6"
+            app:cornerRadius="13dp"
+            tools:ignore="UsingOnClickInXml" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

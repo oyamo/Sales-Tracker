@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-night/ic_baseline_lock_24.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable-night/ic_baseline_person_24.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable-v24/bar_tip.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/drawable/bar_background.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/drawable/bar_indicator.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/drawable/bar_tip.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/drawable/dot_dashboard.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_work_24.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14305555555555555" />
+        <entry key="app/src/main/res/drawable/ic_trophy.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable/input_background.xml" value="0.20723684210526316" />
+        <entry key="app/src/main/res/drawable/stock_svg.xml" value="0.23387622149837134" />
+        <entry key="app/src/main/res/font/sales_font.xml" value="0.11180555555555556" />
+        <entry key="app/src/main/res/layout/activity_confirm_code.xml" value="0.19703947368421051" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashoard.xml" value="0.19703947368421051" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1110213316095669" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.19703947368421051" />
+        <entry key="app/src/main/res/layout/fragment_alert.xml" value="0.19703947368421051" />
+        <entry key="app/src/main/res/layout/fragment_error.xml" value="0.19703947368421051" />
+        <entry key="app/src/main/res/layout/fragment_loading.xml" value="0.23209459459459458" />
+        <entry key="app/src/main/res/menu/app_bar.xml" value="0.23209459459459458" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14305555555555555" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

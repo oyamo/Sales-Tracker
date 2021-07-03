@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SalesTracker</string>
+    <string name="onboarding_title">Watch your sales Sky-rocket.</string>
+    <string name="onboarding_description">Here is a  reliable battle-tested sales tool so you sip your coffee as you watch  sales grow.</string>
+    <string name="btn_register_onboarding">Register</string>
+    <string name="btn_login_onboarding">Sign in</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login_description">Please provide username and password to login to your account.</string>
+    <string name="all_rights">2021 Ruma. All rights reserved</string>
+    <string name="sign_up">Sign up</string>
+    <string name="signup_welcome">Welcome. There\'s a seat for everyone</string>
+    <string name="two_factor_auth">Two Factor Auth</string>
+    <string name="confirmation_description">Please enter 6 digit code sent to the email associated with this username</string>
+</resources>

@@ -1,0 +1,20 @@
+{
+  "production": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-salestracker-production-01625-authRole",
+      "UnauthRoleArn": "arn:aws:iam::759923233345:role/amplify-salestracker-production-01625-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::759923233345:role/amplify-salestracker-production-01625-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-salestracker-production-01625-deployment",
+      "UnauthRoleName": "amplify-salestracker-production-01625-unauthRole",
+      "StackName": "amplify-salestracker-production-01625",
+      "StackId": "arn:aws:cloudformation:us-east-1:759923233345:stack/amplify-salestracker-production-01625/9bcf9030-dab1-11eb-9d37-126c97cb5bc1",
+      "AmplifyAppId": "d1tix44fw6kflr"
+    },
+    "categories": {
+      "auth": {
+        "salestracker65f0a461": {}
+      }
+    }
+  }
+}

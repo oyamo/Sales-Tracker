@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "salestracker65f0a461": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

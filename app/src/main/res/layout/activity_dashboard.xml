@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ActivityDashBoard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/touche"
+                android:textStyle="bold"
+                android:id="@+id/dashboard_user_name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Hi,Janeth"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/touche"
+            android:id="@+id/dashboard_date"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_user_name"
+            android:text="Mar, 2, 201"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/obama"
+                android:id="@+id/avatar"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_top"
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Your progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/materialTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/bar_background"
+            android:layout_height="16dp"/>
+
+
+        <View
+            android:layout_width="220dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialTextView"
+            android:background="@drawable/bar_tip"
+            android:layout_height="16dp"/>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialTextView"
+            android:background="@drawable/bar_indicator"
+            android:layout_height="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/layout_progress"
+        android:id="@+id/layout_target"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/materialTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="0dp"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="8dp"
+            android:textColor="@color/black"
+            app:iconTint="#040"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Target"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconSize="8dp"
+            android:text="Sold"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            app:iconTint="#ee00"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/dot_dashboard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/materialTextView4"
+            app:layout_constraintStart_toEndOf="@+id/materialTextView3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialTextView4"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            app:iconTint="@color/green"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView5"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5,000"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            app:icon="@drawable/dot_dashboard"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,350"
+            android:textAllCaps="false"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/materialTextView8"
+            app:layout_constraintStart_toEndOf="@id/materialTextView5"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView8"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_dashboard"
+        app:layout_constraintTop_toBottomOf="@id/layout_target"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView9"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Dashboard"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView9"
+            android:weightSum="3">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/light_green"
+                app:cardCornerRadius="16dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_stock_svg"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="5000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="In Stock"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/light_green"
+                app:cardCornerRadius="16dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_baseline_people_24"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="6000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="Staff"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/light_green"
+                app:cardCornerRadius="16dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_store_svg"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="50"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:text="Stores"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:id="@+id/layout_sales_week"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_dashboard">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Sales by Week"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earning"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="8dp"
+            app:iconTint="@color/green"
+            app:layout_constraintEnd_toStartOf="@+id/materialButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gross sales"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:icon="@drawable/dot_dashboard"
+            app:iconSize="8dp"
+            app:iconTint="#FFB300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_sales_week"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:text="8k"
+            android:id="@+id/label2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/label3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:text="6k"
+            android:id="@+id/label3"
+            app:layout_constraintTop_toBottomOf="@id/label2"
+            app:layout_constraintBottom_toTopOf="@id/label4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:text="4k"
+            android:id="@+id/label4"
+            app:layout_constraintTop_toBottomOf="@id/label3"
+            app:layout_constraintBottom_toTopOf="@id/label5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/label5"
+            android:layout_width="wrap_content"
+            android:text="2k"
+            app:layout_constraintTop_toBottomOf="@id/label4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/label6"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/label6"
+            android:layout_width="wrap_content"
+            android:text="0"
+            app:layout_constraintTop_toBottomOf="@id/label5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bar_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/bar_tuesday"
+            app:layout_constraintStart_toEndOf="@id/label4"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/monday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/monday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/monday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/monday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="M"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/bar_tuesday"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/bar_wednesday"
+            app:layout_constraintStart_toEndOf="@id/bar_monday"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/tuesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/tuesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/tuesday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/tuesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="T"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:id="@+id/bar_wednesday"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/bar_thursday"
+            app:layout_constraintStart_toEndOf="@id/bar_tuesday"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/wednesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/wednesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/wednesday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/wednesday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="W"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:id="@+id/bar_thursday"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/bar_friday"
+            app:layout_constraintStart_toEndOf="@id/bar_wednesday"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/thursday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/thursday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/thursday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/thursday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="TH"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:id="@+id/bar_friday"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/bar_saturday"
+            app:layout_constraintStart_toEndOf="@id/bar_thursday"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/friday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/friday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/friday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/friday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="F"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:id="@+id/bar_saturday"
+            android:paddingEnd="10dp"
+            app:layout_constraintStart_toEndOf="@id/bar_friday"
+            app:layout_constraintEnd_toStartOf="@id/bar_sunday"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/saturday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/saturday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/saturday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/saturday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="SA"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:id="@+id/bar_sunday"
+            android:paddingEnd="10dp"
+            app:layout_constraintStart_toEndOf="@id/bar_saturday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_tip"
+                app:layout_constraintBottom_toTopOf="@id/sunday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_indicator"
+                app:layout_constraintBottom_toTopOf="@id/sunday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/sunday"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bar_background"
+                app:layout_constraintBottom_toTopOf="@+id/sunday"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="SU"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_height="2dp"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/white"
+            app:itemIconTint="@color/black"
+            app:menu="@menu/app_bar"
+            app:itemTextColor="@color/black"
+            android:layout_height="?actionBarSize"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
